@@ -1,0 +1,233 @@
+2023-09-12T13:39:59.087+03:00  INFO 20312 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Starting CoworkingTestProjectApplication using Java 19.0.1 with PID 20312 (E:\Programming\Java project IDEA\coworking-test-project\build\classes\java\main started by Владислав in E:\Programming\Java project IDEA\coworking-test-project)
+2023-09-12T13:39:59.088+03:00  INFO 20312 --- [main] r.c.t.p.CoworkingTestProjectApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T13:39:59.329+03:00  INFO 20312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T13:39:59.352+03:00  INFO 20312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 3 JPA repository interfaces.
+2023-09-12T13:39:59.561+03:00  INFO 20312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-12T13:39:59.565+03:00  INFO 20312 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-12T13:39:59.565+03:00  INFO 20312 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-12T13:39:59.601+03:00  INFO 20312 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-12T13:39:59.602+03:00  INFO 20312 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 494 ms
+2023-09-12T13:39:59.660+03:00  INFO 20312 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.0 by Redgate
+2023-09-12T13:39:59.660+03:00  INFO 20312 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-12T13:39:59.660+03:00  INFO 20312 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-12T13:39:59.664+03:00  INFO 20312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-12T13:39:59.725+03:00  INFO 20312 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@23e3f5cd
+2023-09-12T13:39:59.726+03:00  INFO 20312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-12T13:39:59.733+03:00  INFO 20312 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5420/coworking_db (PostgreSQL 15.4)
+2023-09-12T13:39:59.757+03:00  INFO 20312 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.013s)
+2023-09-12T13:39:59.775+03:00  INFO 20312 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 20230911204700
+2023-09-12T13:39:59.775+03:00  INFO 20312 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-09-12T13:39:59.806+03:00  INFO 20312 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T13:39:59.827+03:00  INFO 20312 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-12T13:39:59.828+03:00  INFO 20312 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-12T13:39:59.880+03:00  INFO 20312 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:39:59.936+03:00  INFO 20312 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T13:40:00.045+03:00  INFO 20312 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:40:00.345+03:00  INFO 20312 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T13:40:00.365+03:00 DEBUG 20312 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column date_booking set data type time(6)
+2023-09-12T13:40:00.366+03:00 DEBUG 20312 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column end_time set data type time(6)
+2023-09-12T13:40:00.367+03:00 DEBUG 20312 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column start_time set data type time(6)
+2023-09-12T13:40:00.387+03:00  INFO 20312 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T13:40:00.499+03:00  WARN 20312 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12T13:40:00.642+03:00  INFO 20312 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12T13:40:00.646+03:00  INFO 20312 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Started CoworkingTestProjectApplication in 1.742 seconds (process running for 1.99)
+2023-09-12T13:40:06.035+03:00  INFO 20312 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12T13:40:06.035+03:00  INFO 20312 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-12T13:40:06.035+03:00  INFO 20312 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-12T13:40:06.096+03:00 DEBUG 20312 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into coworking (available,number_of_rooms) values (?,?)
+2023-09-12T13:40:06.103+03:00 DEBUG 20312 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:40:06.105+03:00 DEBUG 20312 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:40:06.106+03:00 DEBUG 20312 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:40:32.161+03:00  INFO 3336 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Starting CoworkingTestProjectApplication using Java 19.0.1 with PID 3336 (E:\Programming\Java project IDEA\coworking-test-project\build\classes\java\main started by Владислав in E:\Programming\Java project IDEA\coworking-test-project)
+2023-09-12T13:40:32.162+03:00  INFO 3336 --- [main] r.c.t.p.CoworkingTestProjectApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T13:40:32.404+03:00  INFO 3336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T13:40:32.429+03:00  INFO 3336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2023-09-12T13:40:32.640+03:00  INFO 3336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-12T13:40:32.645+03:00  INFO 3336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-12T13:40:32.645+03:00  INFO 3336 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-12T13:40:32.681+03:00  INFO 3336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-12T13:40:32.681+03:00  INFO 3336 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 501 ms
+2023-09-12T13:40:32.737+03:00  INFO 3336 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.0 by Redgate
+2023-09-12T13:40:32.737+03:00  INFO 3336 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-12T13:40:32.737+03:00  INFO 3336 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-12T13:40:32.741+03:00  INFO 3336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-12T13:40:32.800+03:00  INFO 3336 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@45a1d057
+2023-09-12T13:40:32.801+03:00  INFO 3336 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-12T13:40:32.809+03:00  INFO 3336 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5420/coworking_db (PostgreSQL 15.4)
+2023-09-12T13:40:32.835+03:00  INFO 3336 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.014s)
+2023-09-12T13:40:32.854+03:00  INFO 3336 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 20230911204700
+2023-09-12T13:40:32.854+03:00  INFO 3336 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-09-12T13:40:32.886+03:00  INFO 3336 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T13:40:32.906+03:00  INFO 3336 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-12T13:40:32.907+03:00  INFO 3336 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-12T13:40:32.957+03:00  INFO 3336 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:40:33.014+03:00  INFO 3336 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T13:40:33.127+03:00  INFO 3336 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:40:33.430+03:00  INFO 3336 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T13:40:33.448+03:00 DEBUG 3336 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column date_booking set data type time(6)
+2023-09-12T13:40:33.449+03:00 DEBUG 3336 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column end_time set data type time(6)
+2023-09-12T13:40:33.450+03:00 DEBUG 3336 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column start_time set data type time(6)
+2023-09-12T13:40:33.472+03:00  INFO 3336 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T13:40:33.586+03:00  WARN 3336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12T13:40:33.729+03:00  INFO 3336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12T13:40:33.733+03:00  INFO 3336 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Started CoworkingTestProjectApplication in 1.769 seconds (process running for 2.018)
+2023-09-12T13:40:55.104+03:00  INFO 20100 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Starting CoworkingTestProjectApplication using Java 19.0.1 with PID 20100 (E:\Programming\Java project IDEA\coworking-test-project\build\classes\java\main started by Владислав in E:\Programming\Java project IDEA\coworking-test-project)
+2023-09-12T13:40:55.105+03:00  INFO 20100 --- [main] r.c.t.p.CoworkingTestProjectApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T13:40:55.363+03:00  INFO 20100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T13:40:55.388+03:00  INFO 20100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2023-09-12T13:40:55.599+03:00  INFO 20100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-12T13:40:55.603+03:00  INFO 20100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-12T13:40:55.603+03:00  INFO 20100 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-12T13:40:55.640+03:00  INFO 20100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-12T13:40:55.640+03:00  INFO 20100 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 515 ms
+2023-09-12T13:40:55.699+03:00  INFO 20100 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.0 by Redgate
+2023-09-12T13:40:55.699+03:00  INFO 20100 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-12T13:40:55.699+03:00  INFO 20100 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-12T13:40:55.703+03:00  INFO 20100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-12T13:40:55.765+03:00  INFO 20100 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@71560f51
+2023-09-12T13:40:55.765+03:00  INFO 20100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-12T13:40:55.773+03:00  INFO 20100 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5420/coworking_db (PostgreSQL 15.4)
+2023-09-12T13:40:55.798+03:00  INFO 20100 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.015s)
+2023-09-12T13:40:55.817+03:00  INFO 20100 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 20230911204700
+2023-09-12T13:40:55.817+03:00  INFO 20100 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-09-12T13:40:55.851+03:00  INFO 20100 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T13:40:55.871+03:00  INFO 20100 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-12T13:40:55.872+03:00  INFO 20100 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-12T13:40:55.922+03:00  INFO 20100 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:40:55.978+03:00  INFO 20100 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T13:40:56.091+03:00  INFO 20100 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:40:56.390+03:00  INFO 20100 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T13:40:56.408+03:00 DEBUG 20100 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column date_booking set data type time(6)
+2023-09-12T13:40:56.409+03:00 DEBUG 20100 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column end_time set data type time(6)
+2023-09-12T13:40:56.411+03:00 DEBUG 20100 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column start_time set data type time(6)
+2023-09-12T13:40:56.432+03:00  INFO 20100 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T13:40:56.547+03:00  WARN 20100 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12T13:40:56.687+03:00  INFO 20100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12T13:40:56.691+03:00  INFO 20100 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Started CoworkingTestProjectApplication in 1.768 seconds (process running for 2.01)
+2023-09-12T13:40:57.632+03:00  INFO 20100 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12T13:40:57.632+03:00  INFO 20100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-12T13:40:57.632+03:00  INFO 20100 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-12T13:40:57.694+03:00 DEBUG 20100 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into coworking (available,number_of_rooms) values (?,?)
+2023-09-12T13:40:57.701+03:00 DEBUG 20100 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:40:57.702+03:00 DEBUG 20100 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:40:57.702+03:00 DEBUG 20100 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:43:52.247+03:00  INFO 17360 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Starting CoworkingTestProjectApplication using Java 19.0.1 with PID 17360 (E:\Programming\Java project IDEA\coworking-test-project\build\classes\java\main started by Владислав in E:\Programming\Java project IDEA\coworking-test-project)
+2023-09-12T13:43:52.248+03:00  INFO 17360 --- [main] r.c.t.p.CoworkingTestProjectApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T13:43:52.500+03:00  INFO 17360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T13:43:52.527+03:00  INFO 17360 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2023-09-12T13:43:52.728+03:00  INFO 17360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-12T13:43:52.733+03:00  INFO 17360 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-12T13:43:52.733+03:00  INFO 17360 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-12T13:43:52.770+03:00  INFO 17360 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-12T13:43:52.771+03:00  INFO 17360 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 502 ms
+2023-09-12T13:43:52.833+03:00  INFO 17360 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.0 by Redgate
+2023-09-12T13:43:52.833+03:00  INFO 17360 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-12T13:43:52.833+03:00  INFO 17360 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-12T13:43:52.837+03:00  INFO 17360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-12T13:43:52.901+03:00  INFO 17360 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76437e9b
+2023-09-12T13:43:52.902+03:00  INFO 17360 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-12T13:43:52.911+03:00  INFO 17360 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5420/coworking_db (PostgreSQL 15.4)
+2023-09-12T13:43:52.938+03:00  INFO 17360 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.016s)
+2023-09-12T13:43:52.957+03:00  INFO 17360 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 20230911204700
+2023-09-12T13:43:52.958+03:00  INFO 17360 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-09-12T13:43:52.990+03:00  INFO 17360 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T13:43:53.012+03:00  INFO 17360 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-12T13:43:53.013+03:00  INFO 17360 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-12T13:43:53.066+03:00  INFO 17360 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:43:53.119+03:00  INFO 17360 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T13:43:53.231+03:00  INFO 17360 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:43:53.530+03:00  INFO 17360 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T13:43:53.547+03:00 DEBUG 17360 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column date_booking set data type time(6)
+2023-09-12T13:43:53.550+03:00 DEBUG 17360 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column end_time set data type time(6)
+2023-09-12T13:43:53.551+03:00 DEBUG 17360 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column start_time set data type time(6)
+2023-09-12T13:43:53.571+03:00  INFO 17360 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T13:43:53.685+03:00  WARN 17360 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12T13:43:53.826+03:00  INFO 17360 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12T13:43:53.830+03:00  INFO 17360 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Started CoworkingTestProjectApplication in 1.766 seconds (process running for 2.008)
+2023-09-12T13:43:57.046+03:00  INFO 17360 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12T13:43:57.046+03:00  INFO 17360 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-12T13:43:57.046+03:00  INFO 17360 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-12T13:43:57.111+03:00 DEBUG 17360 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into coworking (available,number_of_rooms) values (?,?)
+2023-09-12T13:43:57.117+03:00 DEBUG 17360 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:43:57.118+03:00 DEBUG 17360 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:43:57.119+03:00 DEBUG 17360 --- [http-nio-8080-exec-6] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:44:11.176+03:00  INFO 13676 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Starting CoworkingTestProjectApplication using Java 19.0.1 with PID 13676 (E:\Programming\Java project IDEA\coworking-test-project\build\classes\java\main started by Владислав in E:\Programming\Java project IDEA\coworking-test-project)
+2023-09-12T13:44:11.177+03:00  INFO 13676 --- [main] r.c.t.p.CoworkingTestProjectApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T13:44:11.414+03:00  INFO 13676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T13:44:11.439+03:00  INFO 13676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2023-09-12T13:44:11.648+03:00  INFO 13676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-12T13:44:11.653+03:00  INFO 13676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-12T13:44:11.653+03:00  INFO 13676 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-12T13:44:11.688+03:00  INFO 13676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-12T13:44:11.689+03:00  INFO 13676 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 494 ms
+2023-09-12T13:44:11.747+03:00  INFO 13676 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.0 by Redgate
+2023-09-12T13:44:11.747+03:00  INFO 13676 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-12T13:44:11.747+03:00  INFO 13676 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-12T13:44:11.751+03:00  INFO 13676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-12T13:44:11.810+03:00  INFO 13676 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c931134
+2023-09-12T13:44:11.810+03:00  INFO 13676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-12T13:44:11.818+03:00  INFO 13676 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5420/coworking_db (PostgreSQL 15.4)
+2023-09-12T13:44:11.843+03:00  INFO 13676 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.015s)
+2023-09-12T13:44:11.861+03:00  INFO 13676 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 20230911204700
+2023-09-12T13:44:11.861+03:00  INFO 13676 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-09-12T13:44:11.892+03:00  INFO 13676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T13:44:11.913+03:00  INFO 13676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-12T13:44:11.914+03:00  INFO 13676 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-12T13:44:11.973+03:00  INFO 13676 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:44:12.029+03:00  INFO 13676 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T13:44:12.142+03:00  INFO 13676 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:44:12.439+03:00  INFO 13676 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T13:44:12.457+03:00 DEBUG 13676 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column date_booking set data type time(6)
+2023-09-12T13:44:12.459+03:00 DEBUG 13676 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column end_time set data type time(6)
+2023-09-12T13:44:12.460+03:00 DEBUG 13676 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column start_time set data type time(6)
+2023-09-12T13:44:12.480+03:00  INFO 13676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T13:44:12.597+03:00  WARN 13676 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12T13:44:12.733+03:00  INFO 13676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12T13:44:12.736+03:00  INFO 13676 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Started CoworkingTestProjectApplication in 1.739 seconds (process running for 1.985)
+2023-09-12T13:44:15.890+03:00  INFO 13676 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12T13:44:15.890+03:00  INFO 13676 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-12T13:44:15.891+03:00  INFO 13676 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-12T13:44:15.950+03:00 DEBUG 13676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into coworking (available,number_of_rooms) values (?,?)
+2023-09-12T13:44:15.957+03:00 DEBUG 13676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:44:15.958+03:00 DEBUG 13676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:44:15.959+03:00 DEBUG 13676 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:44:27.648+03:00  INFO 10608 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Starting CoworkingTestProjectApplication using Java 19.0.1 with PID 10608 (E:\Programming\Java project IDEA\coworking-test-project\build\classes\java\main started by Владислав in E:\Programming\Java project IDEA\coworking-test-project)
+2023-09-12T13:44:27.649+03:00  INFO 10608 --- [main] r.c.t.p.CoworkingTestProjectApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-09-12T13:44:27.897+03:00  INFO 10608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-12T13:44:27.922+03:00  INFO 10608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2023-09-12T13:44:28.129+03:00  INFO 10608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-12T13:44:28.134+03:00  INFO 10608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-12T13:44:28.134+03:00  INFO 10608 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-12T13:44:28.184+03:00  INFO 10608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-12T13:44:28.184+03:00  INFO 10608 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 516 ms
+2023-09-12T13:44:28.242+03:00  INFO 10608 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.0 by Redgate
+2023-09-12T13:44:28.242+03:00  INFO 10608 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-09-12T13:44:28.242+03:00  INFO 10608 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-09-12T13:44:28.246+03:00  INFO 10608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-12T13:44:28.307+03:00  INFO 10608 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2be818da
+2023-09-12T13:44:28.308+03:00  INFO 10608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-12T13:44:28.315+03:00  INFO 10608 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5420/coworking_db (PostgreSQL 15.4)
+2023-09-12T13:44:28.342+03:00  INFO 10608 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.016s)
+2023-09-12T13:44:28.362+03:00  INFO 10608 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 20230911204700
+2023-09-12T13:44:28.363+03:00  INFO 10608 --- [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2023-09-12T13:44:28.395+03:00  INFO 10608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-12T13:44:28.416+03:00  INFO 10608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-12T13:44:28.417+03:00  INFO 10608 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-12T13:44:28.469+03:00  INFO 10608 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:44:28.525+03:00  INFO 10608 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-12T13:44:28.636+03:00  INFO 10608 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-12T13:44:28.934+03:00  INFO 10608 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-12T13:44:28.953+03:00 DEBUG 10608 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column date_booking set data type time(6)
+2023-09-12T13:44:28.955+03:00 DEBUG 10608 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column end_time set data type time(6)
+2023-09-12T13:44:28.956+03:00 DEBUG 10608 --- [main] org.hibernate.SQL                        : alter table if exists coworking_schedule alter column start_time set data type time(6)
+2023-09-12T13:44:28.976+03:00  INFO 10608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-12T13:44:29.089+03:00  WARN 10608 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-12T13:44:29.233+03:00  INFO 10608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-12T13:44:29.237+03:00  INFO 10608 --- [main] r.c.t.p.CoworkingTestProjectApplication  : Started CoworkingTestProjectApplication in 1.769 seconds (process running for 2.021)
+2023-09-12T13:44:31.232+03:00  INFO 10608 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-12T13:44:31.232+03:00  INFO 10608 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-12T13:44:31.232+03:00  INFO 10608 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-09-12T13:44:31.293+03:00 DEBUG 10608 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into coworking (available,number_of_rooms) values (?,?)
+2023-09-12T13:44:31.301+03:00 DEBUG 10608 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:44:31.302+03:00 DEBUG 10608 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)
+2023-09-12T13:44:31.303+03:00 DEBUG 10608 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : insert into room (coworking_id,place) values (?,?)

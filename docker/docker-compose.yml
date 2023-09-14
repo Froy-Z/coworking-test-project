@@ -1,0 +1,14 @@
+version: '3'
+services:
+  coworking:
+    image: coworking_db
+    container_name: container_db
+    ports:
+      - "5420:5432"
+    environment:
+      POSTGRES_DB: coworking_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+    restart: always
+    volumes:
+      - ./pg_data:/var/lib/postgres/data
