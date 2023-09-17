@@ -1,4 +1,4 @@
-package ru.coworking.test.project.exceptions;
+package ru.coworking.test.project.exception;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

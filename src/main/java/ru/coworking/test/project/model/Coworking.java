@@ -22,10 +22,6 @@ public class Coworking {
     @Column(unique = true)
     String name;
 
-    @Column(name = "is_available")
-    @Builder.Default
-    boolean available = true;
-
     @OneToMany(mappedBy = "coworking", cascade = CascadeType.ALL, orphanRemoval = true)
     List<Room> rooms;
 

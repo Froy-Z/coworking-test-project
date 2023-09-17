@@ -1,4 +1,4 @@
-package ru.coworking.test.project.factories;
+package ru.coworking.test.project.factory;
 
 import org.springframework.stereotype.Component;
 import ru.coworking.test.project.dto.RoomDto;
@@ -10,7 +10,6 @@ public class RoomDtoFactory {
         return RoomDto.builder()
                 .id(room.getId())
                 .workSpaces(room.getWorkSpaces())
-                .available(room.isAvailable())
                 .build();
     }
 }

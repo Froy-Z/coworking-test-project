@@ -1,4 +1,4 @@
-package ru.coworking.test.project.controllers;
+package ru.coworking.test.project.controller;
 
 
 import lombok.AccessLevel;
@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 import ru.coworking.test.project.dto.AskDto;
 import ru.coworking.test.project.dto.CoworkingDto;
-import ru.coworking.test.project.exceptions.BadRequestException;
-import ru.coworking.test.project.exceptions.NotFoundException;
-import ru.coworking.test.project.factories.CoworkingDtoFactory;
+import ru.coworking.test.project.exception.BadRequestException;
+import ru.coworking.test.project.exception.NotFoundException;
+import ru.coworking.test.project.factory.CoworkingDtoFactory;
 import ru.coworking.test.project.model.Coworking;
 import ru.coworking.test.project.repository.CoworkingRepo;
 
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
- *  реализация REST-контроллера для сущности Коворкинга, создан CRUD
+ * реализация REST-контроллера для сущности Коворкинга, создан CRUD
  */
 
 @Transactional
@@ -57,34 +57,36 @@ public class CoworkingController {
 
     // http://localhost:9999/api/coworkings
     // http://localhost:9999/api/coworkings/1
-    @GetMapping(path ={GET_COWORKING_ALL, GET_COWORKING}) // получение информации о коворкинге(ах)
+    @GetMapping(path = {GET_COWORKING_ALL, GET_COWORKING}) // получение информации о коворкинге(ах)
     public ResponseEntity<?> readCoworking(@PathVariable(required = false) Long coworking_id) {
         if (coworking_id != null) {
+
             Coworking coworking = coworkingRepo.findById(coworking_id)
                     .orElseThrow(() ->
                             new NotFoundException(
                                     String.format(
                                             "Coworking with <id = %d> doesn't not found",
                                             coworking_id)));
+
             return ResponseEntity.ok(coworkingDtoFactory.makeCoworkingDto(coworking));
+
         } else {
+
             List<Coworking> coworkings = coworkingRepo.findAll();
+
             List<CoworkingDto> coworkingDtos = coworkings.stream()
                     .map(coworkingDtoFactory::makeCoworkingDto)
                     .collect(Collectors.toList());
+
             return ResponseEntity.ok(coworkingDtos);
         }
     }
 
 
-    /* http://localhost:9999/api/coworkings/4?name=Необычный%20экипаж&available=false
-     * доступно частичное изменение
-     */
+    // http://localhost:9999/api/coworkings/4?name=Необычный%20экипаж
     @PatchMapping(EDIT_COWORKING) // смена доступности и имени coworking
-    public CoworkingDto updateCoworking(
-            @PathVariable Long coworking_id,
-            @RequestParam(required = false) String name,
-            @RequestParam(required = false) Boolean available) {
+    public CoworkingDto updateCoworking(@PathVariable Long coworking_id,
+                                         @RequestParam(required = false) String name) {
 
         Coworking coworking = coworkingRepo
                 .findById(coworking_id)
@@ -97,7 +99,7 @@ public class CoworkingController {
                         )
                 );
 
-        if(name != null) {
+        if (name != null) {
             coworkingRepo
                     .findByName(name)
                     .filter(anotherCoworking ->
@@ -106,7 +108,7 @@ public class CoworkingController {
                     .ifPresent(anotherCoworking -> {
                         throw new BadRequestException(
                                 String.format(
-                                        "Coworking with <name = %s> doesn't exist.",
+                                        "A coworking space with <%s> already exists.",
                                         name
                                 )
                         );
@@ -114,8 +116,6 @@ public class CoworkingController {
             coworking.setName(name);
         }
 
-        if(available != null)
-            coworking.setAvailable(available);
 
         return coworkingDtoFactory.makeCoworkingDto(coworking);
     }
@@ -123,19 +123,23 @@ public class CoworkingController {
     @DeleteMapping(path = {DELETE_COWORKING, DELETE_COWORKING_ALL})
     public AskDto deleteCoworking(@PathVariable(required = false) Long coworking_id) {
 
-        if(coworking_id != null) {
+        if (coworking_id != null) {
             if (coworkingRepo.existsById(coworking_id)) {
                 coworkingRepo.deleteById(coworking_id);
             } else {
                 throw new NotFoundException(
                         String.format("Coworking with <id = %d> doesn't exist.",
-                                coworking_id)
+                                coworking_id
+                        )
                 );
             }
         } else {
             coworkingRepo.deleteAll();
         }
 
-        return AskDto.makeDefault("Data deleted successfully.");
+        return AskDto.makeDefault("Coworking(-s) deleted successfully.");
     }
+
+    // TODO: рефакторинг кода на наличие дублей
 }
+

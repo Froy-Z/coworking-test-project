@@ -13,6 +13,4 @@ public class RoomDto {
     Long id;
 
     int workSpaces;
-
-    boolean available;
 }

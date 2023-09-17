@@ -1,4 +1,4 @@
-package ru.coworking.test.project.factories;
+package ru.coworking.test.project.factory;
 
 import org.springframework.stereotype.Component;
 import ru.coworking.test.project.dto.ReservationDto;

@@ -15,6 +15,4 @@ public class CoworkingDto {
 
     @NonNull
     String name;
-
-    boolean available;
 }

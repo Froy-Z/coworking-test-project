@@ -1,5 +1,6 @@
 package ru.coworking.test.project.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -18,14 +19,11 @@ public class Room {
     Long id;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "coworking_id")
     Coworking coworking;
 
     @Column(name = "work_spaces")
     int workSpaces;
-
-    @Column(name = "is_available")
-    @Builder.Default
-    boolean available = true;
 
 }

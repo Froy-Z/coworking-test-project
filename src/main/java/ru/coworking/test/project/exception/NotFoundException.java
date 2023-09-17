@@ -1,4 +1,4 @@
-package ru.coworking.test.project.exceptions;
+package ru.coworking.test.project.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

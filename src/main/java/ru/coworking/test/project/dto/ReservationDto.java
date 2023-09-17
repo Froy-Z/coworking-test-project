@@ -2,6 +2,7 @@ package ru.coworking.test.project.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
@@ -15,8 +16,10 @@ public class ReservationDto {
     Long id;
 
     @NonNull
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     LocalDateTime startBooking;
 
     @NonNull
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     LocalDateTime endBooking;
 }

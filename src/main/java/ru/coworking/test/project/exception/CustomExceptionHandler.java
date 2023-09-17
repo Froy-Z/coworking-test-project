@@ -1,4 +1,4 @@
-package ru.coworking.test.project.exceptions;
+package ru.coworking.test.project.exception;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;

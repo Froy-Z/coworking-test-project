@@ -9,4 +9,5 @@ import java.util.Optional;
 @Repository
 public interface CoworkingRepo extends JpaRepository<Coworking, Long> {
     Optional<Coworking> findByName(String name);
+
 }
