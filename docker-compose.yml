@@ -1,0 +1,34 @@
+version: '3'
+services:
+  coworking_db:
+    image: postgres:latest
+    container_name: container_db
+    ports:
+      - "5420:5432"
+    environment:
+      POSTGRES_DB: coworking_db
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123456
+    restart: always
+    volumes:
+      - ./docker/postgreSQL/pg_data:/var/lib/postgres/data
+      - ./docker/postgreSQL/database_dump.sql:/docker-entrypoint-initdb.d/database_dump.sql
+    networks:
+      - network_main
+
+  spring:
+    image: openjdk:19-jdk-alpine
+    container_name: spring_boot
+    build:
+      dockerfile: Dockerfile
+      context: ./docker/spring
+
+    ports:
+      - "9999:8080"
+    depends_on:
+      - coworking_db
+    networks:
+      - network_main
+
+networks:
+  network_main:
