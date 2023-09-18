@@ -2,8 +2,8 @@ spring:
   # подключение к БД
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://container_db:5420/coworking_db
-#    url: jdbc:postgresql://localhost:5420/coworking_db
+    url: jdbc:postgresql://container_db:5432/coworking_db
+#    url: jdbc:postgresql://localhost:5432/coworking_db
     username: root
     password: 123456
   # автоматическое создание и обновление таблиц

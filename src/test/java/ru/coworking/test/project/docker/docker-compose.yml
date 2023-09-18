@@ -4,7 +4,7 @@ services:
     image: coworking_db
     container_name: container_db
     ports:
-      - "5420:5432"
+      - "5432:5432"
     environment:
       POSTGRES_DB: coworking_db
       POSTGRES_USER: root
